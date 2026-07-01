@@ -1,0 +1,56 @@
+# Build directories
+build/
+build-*/
+cmake-build-*/
+out/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+CTestTestfile.cmake
+Testing/
+
+# Binaries
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+
+# Logs
+*.log
+logs/
+
+# Local config / secrets
+.env
+.env.*
+*.local
+
+# IDE / editors
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Runtime storage
+storage/
+tmp/
+uploads/
+
+# Docker / local volumes
+postgres-data/
+pgdata/
+
+# Python helper scripts cache, if we add load tools later
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+.gitignore
