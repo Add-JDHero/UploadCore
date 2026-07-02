@@ -1,2 +1,5 @@
 CompileFlags:
   CompilationDatabase: build
+  Add:
+    - -I/home/developer/userver/core/include
+    - -I/home/developer/userver/universal/include
