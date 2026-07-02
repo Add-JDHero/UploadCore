@@ -19,7 +19,7 @@ components_manager:
             fs-task-processor: fs-task-processor
             loggers:
                 default:
-                    file_path: '/workspace/UploadCore/logs/service.log'
+                    file_path: 'logs/service.log'
                     level: $logger-level
                     overflow_behavior: discard  # Drop logs if the system is too busy to write them down.
 

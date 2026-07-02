@@ -38,9 +38,9 @@ This project exists to meet those problems directly.
 
 Current status
 
-Project bootstrap.
+**/ping added**
 
-No service code yet.
+
 
 Planned stack
 
@@ -107,3 +107,13 @@ After the basic upload/download flow works, the project will evolve step by step
 * load testing;
 * latency measurements;
 * metrics and observability.
+
+### Local run
+```bash
+cmake -B build-debug -DCMAKE_BUILD_TYPE=Debug
+cmake --build build-debug -j
+
+./build-debug/UploadCore \
+  --config configs/static_config.yaml \
+  --config_vars configs/config_vars.yaml
+```
