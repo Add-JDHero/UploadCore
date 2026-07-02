@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: uploadcore-postgres
+    environment:
+      POSTGRES_DB: uploadcore
+      POSTGRES_USER: uploadcore
+      POSTGRES_PASSWORD: uploadcore
+    ports:
+      - "5432:5432"
+    volumes:
+      - uploadcore-postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U uploadcore -d uploadcore"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+volumes:
+  uploadcore-postgres-data:
