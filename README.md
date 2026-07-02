@@ -113,7 +113,13 @@ After the basic upload/download flow works, the project will evolve step by step
 cmake -B build-debug -DCMAKE_BUILD_TYPE=Debug
 cmake --build build-debug -j
 
-./build-debug/UploadCore \
-  --config configs/static_config.yaml \
-  --config_vars configs/config_vars.yaml
+./scripts/db-up.sh
+./scripts/db-migrate.sh
+./scripts/run-service.sh
 ```
+
+### Check
+```bash
+curl http://localhost:8080/ping
+```
+
